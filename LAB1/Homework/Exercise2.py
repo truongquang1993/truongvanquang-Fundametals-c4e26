@@ -10,30 +10,24 @@ raw_data = conn.read()
 
 page_content  = raw_data.decode("utf8")
 
-with open("SuaVietNam.html", "wb") as f:
-    f.write(raw_data)
-# page_content  = f.decode("utf8")
 
 # 3. Find ROI (Region of insert)
 soup = BeautifulSoup(page_content, "html.parser")
-
-print(soup, prettify())
-
-# table = soup.find("table", id="tableContent")
-# tbody = table.tbody
-
-# print(tbody)
+table = soup.find("table", id="tableContent")
 
 
 # 4. Extra ROI
-# tr_list = tbody.find_all("tr")
-# print(li_list)
+tr_list = table.find_all("tr")
+title_list = []
+row = []
+clum = []
+a=0
 
-# title_list = []
-# row = []
-# clum = []
-# for tr in tr_list:
-#     td_list = tr.find_all("td")
+print(tr_list[0])
+# for tr in tr_list[0]:
+#     print(tr)
+    # td_list = tr.find("td", "b_r_c")
+    # print(td_list[0])
 #     j = 0
 #     clum0 = {}
 #     for i in td_list[0:5]:
@@ -41,7 +35,9 @@ print(soup, prettify())
 #         j += 1
 #         clum0[j]= cl
 #     clum.append(clum0)
+#     row.append(clum)
 
+# print(row)
 #     # strong = li.strong
 #     # oder_number = strong.string
 
@@ -63,4 +59,4 @@ print(soup, prettify())
 #     # top_list.append(top)
 
 # # 5. Save
-# pyexcel.save_as(records=clum, dest_file_name="Exer2.xlsx")
+# pyexcel.save_as(records=row, dest_file_name="Exer2.xlsx")
