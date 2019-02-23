@@ -15,15 +15,16 @@ page_content  = raw_data.decode("utf8")
 soup = BeautifulSoup(page_content, "html.parser")
 table = soup.find("table", id="tableContent")
 
+with open("Sua.html", "wb") as f:
+    f.write(raw_data)
+# # 4. Extra ROI
+# tr_list = table.find_all("tr")
+# title_list = []
+# row = []
+# clum = []
+# a=0
 
-# 4. Extra ROI
-tr_list = table.find_all("tr")
-title_list = []
-row = []
-clum = []
-a=0
-
-print(tr_list[0])
+# print(tr_list[0])
 # for tr in tr_list[0]:
 #     print(tr)
     # td_list = tr.find("td", "b_r_c")

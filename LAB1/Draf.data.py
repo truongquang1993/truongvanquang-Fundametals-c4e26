@@ -11,7 +11,7 @@ raw_data = conn.read()
 page_content  = raw_data.decode("utf8")
 
 # print(page_content)
-# 3. Find ro Region of insert
+# 3. Find ro Region of interest
 soup = BeautifulSoup(page_content, "html.parser")
 ul = soup.find("ul", "ul1 ulnew")
 
