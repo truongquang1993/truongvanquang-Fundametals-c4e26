@@ -1,17 +1,17 @@
 def evaluate(x, y, pt):
     result = 0
-    if pt == "+":
-        result = x + y
+    if op == "+":
+        result_T = x + y
         # break
-    elif pt == "-":
-        result = x - y
+    elif op == "-":
+        result_T = x - y
         # break
-    elif pt == "*":
-        result = x * y
+    elif op == "*":
+        result_T = x * y
         # break
-    elif pt == "/":
-        result = x / y
+    elif op == "/":
+        result_T = x / y
         # break
-    return result
+    return result_T
 
         
