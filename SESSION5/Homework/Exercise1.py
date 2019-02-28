@@ -23,4 +23,4 @@ total = 0
 for k in p_list[0].keys():
     total += p_list[0][k]*p_list[1][k]
 
-print("Total:", total)
+print("Total:", total) 
